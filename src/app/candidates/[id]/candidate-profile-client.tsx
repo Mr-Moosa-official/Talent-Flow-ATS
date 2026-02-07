@@ -5,7 +5,7 @@ import {
   parseResumeAction,
   suggestNextStepAction,
 } from '@/app/actions';
-import { useFormState } from 'react-dom';
+import { useFormState, useFormStatus } from 'react-dom';
 import { useEffect, useState, useTransition } from 'react';
 import {
   Card,
@@ -253,23 +253,4 @@ function SubmitButton() {
       Parse Resume
     </Button>
   );
-}
-
-// Custom hook to get form status in React 18
-function useFormStatus() {
-  const [pending, setPending] = useState(false);
-  useEffect(() => {
-    const form = document.querySelector('form');
-    if (form) {
-      const onSubmit = () => setPending(true);
-      const onReset = () => setPending(false);
-      form.addEventListener('submit', onSubmit);
-      form.addEventListener('reset', onReset); // Not perfect but works for this case
-      return () => {
-        form.removeEventListener('submit', onSubmit);
-        form.removeEventListener('reset', onReset);
-      };
-    }
-  }, []);
-  return { pending };
 }

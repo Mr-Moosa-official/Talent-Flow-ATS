@@ -8,6 +8,7 @@ import { reviews } from '@/lib/data';
 import { PageHeader } from '@/components/layout/header';
 import { StarRating } from '@/components/star-rating';
 import { Badge } from '@/components/ui/badge';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Quote } from 'lucide-react';
 
 export default function ReviewsPage() {
@@ -16,7 +17,7 @@ export default function ReviewsPage() {
       <PageHeader title="Reviews" />
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {reviews.map((review) => (
-          <Card key={review.id} className="flex flex-col">
+          <Card key={review.id} className="flex flex-col justify-between">
             <CardHeader>
               <div className="flex items-center justify-between">
                 <Badge
@@ -39,10 +40,17 @@ export default function ReviewsPage() {
                 <p className="text-sm text-foreground">{review.content}</p>
               </div>
             </CardContent>
-            <CardFooter>
-              <p className="text-xs text-muted-foreground w-full text-right">
-                Anonymous, {review.createdAt}
-              </p>
+            <CardFooter className="flex items-center gap-3 pt-4">
+              <Avatar className="h-10 w-10">
+                <AvatarImage src={review.authorAvatar} alt={review.author} />
+                <AvatarFallback>{review.author.charAt(0)}</AvatarFallback>
+              </Avatar>
+              <div>
+                <p className="text-sm font-semibold">{review.author}</p>
+                <p className="text-xs text-muted-foreground">
+                  {review.createdAt}
+                </p>
+              </div>
             </CardFooter>
           </Card>
         ))}

@@ -25,6 +25,12 @@
       "imageHint": "mobile phone"
     },
     {
+      "id": "project-image-4",
+      "description": "Image for an AI project",
+      "imageUrl": "https://images.unsplash.com/photo-1534723452862-4c874018d66d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxyb2JvdCUyMGFpfGVufDB8fHx8MTc3MDQ5MTY0Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "robot ai"
+    },
+    {
       "id": "course-image-1",
       "description": "Cover image for a React course",
       "imageUrl": "https://images.unsplash.com/photo-1617609277590-ec2d145ca13b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjb2RlJTIwYWJzdHJhY3R8ZW58MHx8fHwxNzcwMzkzMDQ5fDA&ixlib=rb-4.1.0&q=80&w=1080",

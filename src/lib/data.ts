@@ -131,6 +131,14 @@ export const projects: Project[] = [
     imageUrl: 'https://picsum.photos/seed/project3/600/400',
     rating: 4.7,
   },
+  {
+    id: '4',
+    name: 'AI-Powered Search',
+    description: 'Implementing semantic search across the platform.',
+    overview: 'Leveraged vector databases and large language models to provide a more intuitive and accurate search experience for our users.',
+    imageUrl: 'https://picsum.photos/seed/project4/600/400',
+    rating: 4.9,
+  },
 ];
 
 export const reviews: Review[] = [
@@ -140,6 +148,8 @@ export const reviews: Review[] = [
     rating: 5,
     content: 'Working on Project Phoenix was an incredible learning experience. The team was fantastic, and we delivered a product we are all proud of.',
     createdAt: '2 weeks ago',
+    author: 'Clara Oswald',
+    authorAvatar: 'https://i.pravatar.cc/150?u=clara',
   },
   {
     id: '2',
@@ -147,6 +157,8 @@ export const reviews: Review[] = [
     rating: 4,
     content: 'The "Advanced React Patterns" course was very insightful, though some parts were a bit too fast-paced. Overall, a great resource.',
     createdAt: '1 month ago',
+    author: 'Ryan Sinclair',
+    authorAvatar: 'https://i.pravatar.cc/150?u=ryan',
   },
   {
     id: '3',
@@ -154,6 +166,8 @@ export const reviews: Review[] = [
     rating: 5,
     content: 'TalentFlow ATS has streamlined our hiring process significantly. The AI suggestions are surprisingly accurate and save us a lot of time.',
     createdAt: '3 days ago',
+    author: 'Yasmin Khan',
+    authorAvatar: 'https://i.pravatar.cc/150?u=yasmin',
   },
   {
     id: '4',
@@ -161,6 +175,26 @@ export const reviews: Review[] = [
     rating: 4,
     content: 'The Data Pipeline Initiative was challenging but rewarding. We hit some roadblocks, but the outcome was worth the effort.',
     createdAt: '1 week ago',
+    author: 'Graham O\'Brien',
+    authorAvatar: 'https://i.pravatar.cc/150?u=graham',
+  },
+    {
+    id: '5',
+    category: 'Course',
+    rating: 5,
+    content: 'Mastering Go Microservices is a must for any backend developer. The instructor explains complex topics with clarity and provides practical examples.',
+    createdAt: '2 months ago',
+    author: 'River Song',
+    authorAvatar: 'https://i.pravatar.cc/150?u=river',
+  },
+  {
+    id: '6',
+    category: 'Platform',
+    rating: 4,
+    content: 'A huge step up from our previous system. I wish there was a way to bulk-edit candidate stages, but otherwise, it\'s fantastic.',
+    createdAt: '1 month ago',
+    author: 'Jack Harkness',
+    authorAvatar: 'https://i.pravatar.cc/150?u=jack',
   },
 ];
 
@@ -170,27 +204,72 @@ export const courses: Course[] = [
     title: 'Advanced React Patterns',
     description: 'Master advanced techniques in React for scalable applications.',
     imageUrl: 'https://picsum.photos/seed/course1/600/400',
-    rating: 4.5
+    rating: 4.5,
+    instructor: 'Sarah Drasner',
+    instructorAvatar: 'https://i.pravatar.cc/150?u=sarah',
+    duration: '8 Hours',
+    modules: [
+        { title: 'Composition vs. Inheritance', duration: '45 mins' },
+        { title: 'Higher-Order Components (HOCs)', duration: '1.5 hours' },
+        { title: 'Render Props', duration: '1.5 hours' },
+        { title: 'Custom Hooks Deep Dive', duration: '2 hours' },
+        { title: 'State Management with Context', duration: '1 hour' },
+        { title: 'Performance Optimization', duration: '1.25 hours' },
+    ]
   },
   {
     id: '2',
     title: 'Effective Product Management',
     description: 'Learn the essentials of product lifecycle management.',
     imageUrl: 'https://picsum.photos/seed/course2/600/400',
-    rating: 4.9
+    rating: 4.9,
+    instructor: 'Marty Cagan',
+    instructorAvatar: 'https://i.pravatar.cc/150?u=marty',
+    duration: '12 Hours',
+    modules: [
+        { title: 'The Role of a Product Manager', duration: '1 hour' },
+        { title: 'Product Discovery Techniques', duration: '2 hours' },
+        { title: 'User and Market Research', duration: '2 hours' },
+        { title: 'Crafting a Product Strategy', duration: '2 hours' },
+        { title: 'Building a Product Roadmap', duration: '2 hours' },
+        { title: 'Agile & Scrum for PMs', duration: '2 hours' },
+        { title: 'Go-to-Market Strategy', duration: '1 hour' },
+    ]
   },
   {
     id: '3',
     title: 'Leadership for Engineers',
     description: 'Develop your leadership skills to grow into a management role.',
     imageUrl: 'https://picsum.photos/seed/course3/600/400',
-    rating: 4.7
+    rating: 4.7,
+    instructor: 'Camille Fournier',
+    instructorAvatar: 'https://i.pravatar.cc/150?u=camille',
+    duration: '6 Hours',
+    modules: [
+        { title: 'From Engineer to Manager', duration: '1 hour' },
+        { title: 'Mentoring and Coaching', duration: '1.5 hours' },
+        { title: 'Effective 1-on-1s', duration: '1 hour' },
+        { title: 'Managing Technical Debt', duration: '1 hour' },
+        { title: 'Building a Team Culture', duration: '1.5 hours' },
+    ]
   },
     {
     id: '4',
     title: 'Mastering Go Microservices',
     description: 'Build and deploy production-ready microservices with Go.',
     imageUrl: 'https://picsum.photos/seed/course4/600/400',
-    rating: 4.8
+    rating: 4.8,
+    instructor: 'Rob Pike',
+    instructorAvatar: 'https://i.pravatar.cc/150?u=rob',
+    duration: '15 Hours',
+    modules: [
+        { title: 'Introduction to Microservices', duration: '1 hour' },
+        { title: 'Building Your First Go Service', duration: '2 hours' },
+        { title: 'Communication (gRPC & REST)', duration: '3 hours' },
+        { title: 'Containerization with Docker', duration: '2 hours' },
+        { title: 'Deployment with Kubernetes', duration: '3 hours' },
+        { title: 'Observability & Monitoring', duration: '2 hours' },
+        { title: 'Advanced Patterns', duration: '2 hours' },
+    ]
   }
 ];

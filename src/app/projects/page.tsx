@@ -17,7 +17,7 @@ export default function ProjectsPage() {
       <PageHeader title="Projects" />
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {projects.map((project) => (
-          <Card key={project.id}>
+          <Card key={project.id} className="flex flex-col h-full transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
             <div className="relative h-48 w-full">
               <Image
                 src={project.imageUrl}
@@ -32,12 +32,12 @@ export default function ProjectsPage() {
               <CardTitle>{project.name}</CardTitle>
               <CardDescription>{project.description}</CardDescription>
             </CardHeader>
-            <CardContent>
+            <CardContent className="flex-grow">
               <p className="text-sm text-muted-foreground">
                 {project.overview}
               </p>
             </CardContent>
-            <CardFooter>
+            <CardFooter className="mt-auto">
               <div className="flex items-center justify-between w-full">
                 <StarRating rating={project.rating} />
                 <span className="text-sm font-medium text-muted-foreground">

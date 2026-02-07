@@ -10,16 +10,20 @@ import {
   DropdownMenuShortcut,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
+
 
 export function UserNav() {
+  const userAvatar = PlaceHolderImages.find((img) => img.id === 'user-avatar-1');
+  
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" className="relative h-8 w-8 rounded-full">
           <Avatar className="h-9 w-9">
             <AvatarImage
-              src="https://i.pravatar.cc/150?u=a042581f4e29026024d"
-              alt="@shadcn"
+              src={userAvatar?.imageUrl}
+              alt="Jane Doe"
             />
             <AvatarFallback>JD</AvatarFallback>
           </Avatar>

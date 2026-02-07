@@ -39,6 +39,8 @@ export type Review = {
   rating: number;
   content: string;
   createdAt: string;
+  author: string;
+  authorAvatar: string;
 };
 
 export type Course = {
@@ -47,6 +49,13 @@ export type Course = {
   imageUrl: string;
   description: string;
   rating: number;
+  instructor: string;
+  instructorAvatar: string;
+  duration: string;
+  modules: {
+    title: string;
+    duration: string;
+  }[];
 };
 
 export type NavItem = {
