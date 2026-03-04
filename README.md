@@ -7,7 +7,7 @@ It empowers recruiters and organizations to manage talent efficiently, reduce ma
 🚀 Core Features
 📋 Job Requisition Management
 
-Create, edit, and manage job requisitions
+Create, edit, and manage job requisitions 
 
 Define:
 
