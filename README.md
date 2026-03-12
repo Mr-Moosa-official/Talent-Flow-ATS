@@ -1,6 +1,6 @@
 # 🧩 Talent Flow ATS – AI-Powered Applicant Tracking System
 
-Talent Flow  ATS is a modern, intelligent Applicant Tracking System designed to streamline the hiring lifecycle—from job creation to candidate evaluation—using AI-driven automation and insights.
+Talent Flow  ATS is a modern, intelligent  Applicant Tracking System designed to streamline the hiring lifecycle—from job creation to candidate evaluation—using AI-driven automation and insights.
 
 It empowers recruiters and organizations to manage talent efficiently, reduce manual effort, and make smarter hiring decisions.
 
